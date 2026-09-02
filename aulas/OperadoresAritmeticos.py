@@ -10,7 +10,7 @@ subtracao= numero1-numero2
 multiplicacao= numero1*numero2
 #divisão
 divisao=numero1/numero2
-resto=numero1//numero2
+resto=numero1%numero2
 
 print("Soma dos numeros:",soma)
 print("Subtração dos números:",subtracao)
