@@ -35,4 +35,3 @@ print(idade >= 18) #true
 
 
 
-
