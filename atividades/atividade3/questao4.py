@@ -6,3 +6,10 @@ uma média maior ou igual a 6.0 E uma frequência maior ou igual a 75.
 Exiba a média calculada e, em seguida, exiba True se ele foi aprovado ou False se reprovou, usando o operador and.
 """
 #Resposta
+nota1 = float(input("Digite sua primeira nota: "))
+nota2 = float(input("Digite sua segunda nota: "))
+frequencia = int(input("Digite sua requência: "))
+media = (nota1 + nota2) / 2
+resultado= media >= 6 and frequencia >= 75
+print("Sua média foi de", media , "Foi aprovado? :",resultado)
+
