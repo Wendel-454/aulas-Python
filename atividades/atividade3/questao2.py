@@ -7,4 +7,6 @@ Utilizando o operador de módulo (%), calcule e exiba na tela quantas maçãs so
 #Resposta
 quantMacas = int(input("Digite a quantidade total de maçãs colhidas no dia: "))
 macasResto = quantMacas % 12
+quantidadeCaixas = quantMacas // 12
+print("Foram usadas ", quantidadeCaixas, "caixas de maçã")
 print("Ficarão fora das caixas",macasResto,"Maçãs")
