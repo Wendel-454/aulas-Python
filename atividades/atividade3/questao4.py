@@ -13,3 +13,4 @@ media = (nota1 + nota2) / 2
 resultado= media >= 6 and frequencia >= 75
 print("Sua média foi de", media , "Foi aprovado? :",resultado)
 
+
