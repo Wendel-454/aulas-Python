@@ -4,16 +4,12 @@ num2 = int(input("digite o segundo número: "))
 operador = input("Digite o operador que deseja realizar: ")
 match operador:
     case "+":
-        resultado = num1 + num2
-        print(f"O resultado é: {resultado}")
+        print(f"O resultado é: {num1 + num2}")
     case "-":
-        resultado = num1 - num2
-        print(f"O resultado é: {resultado}")
+        print(f"O resultado é: {num1 - num2}")
     case "*":
-        resultado = num1 * num2
-        print(f"O resultado é: {resultado}")
+        print(f"O resultado é: {num1 * num2}")
     case "/":
-        resultado = num1 / num2
-        print(f"O resultado é: {resultado}")
+        print(f"O resultado é: {num1 / num2}")
     case _:
         print("Operação inválida!")
