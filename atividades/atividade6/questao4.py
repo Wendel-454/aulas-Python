@@ -11,9 +11,8 @@ O programa deve pedir para o usuário escolher uma opção. Usando while:
 #Resposta
 import time
 
-
-print("Escolha uma opção")
 resposta = 0
+print("Escolha uma opção")
 while resposta != 2:
     resposta = int(input("1 - Mostrar saudação\n2 - Sair do programa\nSua escolha é:"))
     if resposta == 1:
