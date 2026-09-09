@@ -4,7 +4,7 @@ Escreva um programa que defina esse valor em uma variável e peça ao usuário p
 realizar.
 Usando um laço while, o programa deve subtrair cada gasto do orçamento total e exibir o saldo restante.
 O laço deve continuar pedindo novos gastos enquanto o orçamento for maior que zero.
-Se o usuário gastar todo o dinheiro (ou seja, o orçamento chegar a zero ou ficar negativo), o programa deve encerrar o
+Se o usuário gastar o dinheiro (ou seja, o orçamento chegar a zero ou ficar negativo), o programa deve encerrar o
 laço e exibir a mensagem: "Atenção: Você ficou sem saldo ou estourou seu orçamento!"
 
 """
