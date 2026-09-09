@@ -8,6 +8,7 @@ Exemplo de saída esperada se o usuário digitar 5:
 *... (até 10)
 
 """
+#Resposta
 import time
 
 numero = int(input("Digite o número do qual deseja ver a tabuada: "))
