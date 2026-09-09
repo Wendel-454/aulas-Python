@@ -12,5 +12,13 @@ Quando ele finalmente acertar o número, exiba a mensagem: "Parabéns! Você ace
 import random
 
 numero_secreto = random.randint(1, 10)
-tentativas = 6
-print
+tentativas = 1
+palpite = int(input("Chute um número aleatório de 1 a 10: "))
+while True:
+    if palpite == numero_secreto:
+        print(f"Parabéns! Você acertou o número secreto em {tentativas} tentativas!")
+        break
+    else:
+        tentativas += 1
+        palpite = int(input("Chute incorreto. Tente novamente: "))
+
