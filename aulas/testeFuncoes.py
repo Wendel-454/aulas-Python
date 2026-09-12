@@ -1,6 +1,6 @@
-from aulas.funcoes import soma, olaUsuario
+from aulas.funcoes import soma, olausuario
 
-olaUsuario("João",22)
+olausuario("João",22)
 
 while True:
     valor = soma()
