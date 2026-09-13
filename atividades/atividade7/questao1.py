@@ -27,7 +27,7 @@ for i in funcionarios:
         mantidos.append(i)
 
 
-print(f"Funcionários que serão demitidos \n{demitidos}")
+print(f"Funcionários que serão demitidos: \n{demitidos}")
 print(f"Funcionários que precisam melhorar seu rendimento: \n{mantidos}")
 print(f"Funcionários que receberão aumento: \n{aumento}")
 
