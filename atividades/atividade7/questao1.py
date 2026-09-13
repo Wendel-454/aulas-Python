@@ -1,6 +1,5 @@
 #resposta
 import random
-
 add_funcionario = ""
 funcionarios = []
 sorteio = 0
@@ -8,10 +7,11 @@ while add_funcionario != "sair":
     add_funcionario = input("Digite o nome do funcionário que deseja adicionar ou digite 'sair' para sair.\nDigite aqui:")
     if add_funcionario != "sair":
         funcionarios.append(add_funcionario)
-for i in funcionarios:
+for i in range(len(funcionarios)):
     sorteio = random.randint(0, 1)
     if sorteio == 0:
-        print(f"Funcionário {i} será demitido")
+        print(f"O funcionário {funcionarios[i]} será demitido")
     else:
-        print(f"Funcionário {i} receberá aumento")
+        print(f"O funcionário {funcionarios[i]} Receberá aumento")
+
 
