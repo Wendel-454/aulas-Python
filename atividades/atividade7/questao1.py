@@ -2,6 +2,9 @@
 import random
 
 funcionarios = []
+demitidos = []
+mantidos = []
+aumento = []
 add_funcionario = ""
 contagem = 0
 
@@ -14,13 +17,23 @@ print(f"Quantidade de funcionários: {len(funcionarios)}")
 
 for i in funcionarios:
     contagem += 1
-    print(f"Funcionário {contagem}: {i}")
-
-for i in range(len(funcionarios)):
     faturamento = random.randint(0, 500)
-    if faturamento < 250:
-        print(f"O funcionário {funcionarios[i]} faturou este mês R${faturamento} e será demitido.")
+    print(f"O Funcionário: {i} faturou R${faturamento} Reais.")
+    if faturamento < 300:
+        demitidos.append(i)
+    elif faturamento >= 400:
+        aumento.append(i)
     else:
-        print(f"O funcionário {funcionarios[i]} faturou este mês R${faturamento} e receberá aumento.")
+        mantidos.append(i)
+
+
+print(f"Funcionários que serão demitidos \n{demitidos}")
+print(f"Funcionários que precisam melhorar seu rendimento: \n{mantidos}")
+print(f"Funcionários que receberão aumento: \n{aumento}")
+
+
+
+
+
 
 
