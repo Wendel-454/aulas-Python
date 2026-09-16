@@ -62,12 +62,46 @@ class Carro:
             time.sleep(1)
             print(f"{self.nome} destrancado!")
 
-chevette = Carro("Chevette","Sedan","DL", "Vermelho", "1993", 81, "1.6/S (OHC)")
-gol = Carro("Gol","Hatch","GL", "Prata","1992","98","AP 1.8")
-palio = Carro("Palio","Hatch","EX", "Cinza","1998","61","Fiasa 1.0")
-opala = Carro("Opala","Grand Sedan","Diplomata SE Collectors", "Preto","1992","121", "Opala 4100")
-c10 = Carro("Chevrolet C-10","Caminhonete","Veraneio", "Azul","1971","151","Chevrolet 261")
+chevette = Carro("Chevette",
+                 "Sedan",
+                 "DL",
+                 "Vermelho",
+                 "1993",
+                 81,
+                 "1.6/S (OHC)")
+
+gol = Carro     ("Gol",
+                 "Hatch",
+                 "GL",
+                 "Prata",
+                 "1992",
+                 "98",
+                 "AP 1.8")
+
+palio = Carro   ("Palio",
+                 "Hatch",
+                 "EX",
+                 "Cinza",
+                 "1998",
+                 "61",
+                 "Fiasa 1.0")
+
+opala = Carro   ("Opala",
+                 "Grand Sedan",
+                 "Diplomata SE Collectors",
+                 "Preto",
+                 "1992",
+                 "121",
+                 "Opala 4100")
+
+c10 = Carro     ("Chevrolet C-10",
+                 "Caminhonete",
+                 "Veraneio",
+                 "Azul","1971",
+                 "151",
+                 "Chevrolet 261")
 
 carros = [chevette, gol, palio, opala, c10]
 for i in carros:
     print(i)
+print(chevette)
