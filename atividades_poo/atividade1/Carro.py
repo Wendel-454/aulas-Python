@@ -29,36 +29,38 @@ class Carro:
             print("Motor de partida acionando...")
             time.sleep(1)
             self.ligado = True
-            print("Motor funcionando!")
+            print(f"{self.nome} funcionando!")
             time.sleep(1)
         else:
-            print("Motor já está funcionando!")
+            print(f"{self.nome} já está funcionando!")
 
     def desligar(self):
         if not self.ligado:
+            print(f"Desligando {self.nome}...")
+            time.sleep(1)
             print("Motor já está desligado!")
         else:
             print("Desvirando chave de ignição...")
             time.sleep(1)
             self.ligado = False
-            print("Motor desligado!")
+            print(f"{self.nome} desligado!")
             time.sleep(1)
 
     def trancar(self):
         if not self.trancado:
             print("Acionando controle de alarme...")
             time.sleep(1)
-            print("Carro trancado!")
+            print(f"{self.nome} trancado!")
         else:
-            print("Carro já trancado!")
+            print(f"{self.nome} já está trancado!")
 
     def destrancar(self):
         if not self.trancado:
-            print("Carro já está destrancado!")
+            print(f"{self.nome} já está destrancado!")
         else:
             print("Acionando controle de alarme...")
             time.sleep(1)
-            print("Carro destrancado!")
+            print(f"{self.nome} destrancado!")
 
 chevette = Carro("Chevette","Sedan","DL", "Vermelho", "1993", 81, "1.6/S (OHC)")
 gol = Carro("Gol","Hatch","GL", "Prata","1992","98","AP 1.8")
