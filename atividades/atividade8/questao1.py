@@ -1,4 +1,3 @@
-
 def media():
         nome = input("Digite seu nome: ")
         nota1 = float(input("Digite sua nota no primeiro bimestre: "))
@@ -12,4 +11,3 @@ def media():
             print(f"{nome}, sua média foi de {calcmedia:.2f} e você foi reprovado.")
 
 media()
-

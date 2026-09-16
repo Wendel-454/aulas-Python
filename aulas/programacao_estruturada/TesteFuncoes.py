@@ -1,4 +1,4 @@
-from aulas.funcoes import soma, olausuario
+from aulas.programacao_estruturada.Funcoes import soma, olausuario
 
 olausuario("João",22)
 
