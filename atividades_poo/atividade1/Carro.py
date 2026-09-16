@@ -2,7 +2,8 @@ import time
 
 class Carro:
 
-    def __init__(self,categoria, modelo, cor, ano, potencia, motor):
+    def __init__(self, nome,categoria, modelo, cor, ano, potencia, motor):
+        self.nome = nome
         self.categoria = categoria
         self.modelo = modelo
         self.cor = cor
@@ -13,12 +14,13 @@ class Carro:
         self.trancado = False
 
     def __str__(self):
-        return (f"Categoria: {self.categoria}\n"
-                f"Modelo:    {self.modelo}\n"
-                f"Cor:       {self.cor}\n"
-                f"Ano:       {self.ano}\n"
+        return (f"Nome:      {self.nome}      \n"
+                f"Categoria: {self.categoria} \n"
+                f"Modelo:    {self.modelo}    \n"
+                f"Cor:       {self.cor}       \n"
+                f"Ano:       {self.ano}       \n"
                 f"Potência:  {self.potencia}cv\n"
-                f"Motor:     {self.motor}")
+                f"Motor:     {self.motor}     \n")
 
     def ligar(self):
         if not self.ligado:
@@ -58,8 +60,12 @@ class Carro:
             time.sleep(1)
             print("Carro destrancado!")
 
-chevette = Carro("Sedan","DL", "Vermelho", "1993", 81, "1.6/S (OHC)")
-gol = Carro("Hatch","GL", "Prata","1992","98","AP 1.8")
-palio = Carro("Hatch","EX", "Cinza","1998","61","Fiasa 1.0")
-opala = Carro("Grand Sedan","Diplomata SE Collectors", "Preto","1992","121", "Opala 4100")
-c10 = Carro("Caminhonete","Veraneio", "Azul","1971","151","Chevrolet 261")
+chevette = Carro("Chevette","Sedan","DL", "Vermelho", "1993", 81, "1.6/S (OHC)")
+gol = Carro("Gol","Hatch","GL", "Prata","1992","98","AP 1.8")
+palio = Carro("Palio","Hatch","EX", "Cinza","1998","61","Fiasa 1.0")
+opala = Carro("Opala","Grand Sedan","Diplomata SE Collectors", "Preto","1992","121", "Opala 4100")
+c10 = Carro("Chevrolet C-10","Caminhonete","Veraneio", "Azul","1971","151","Chevrolet 261")
+
+carros = [chevette, gol, palio, opala, c10]
+for i in carros:
+    print(i)
