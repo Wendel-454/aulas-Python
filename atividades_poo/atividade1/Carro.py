@@ -97,11 +97,12 @@ opala = Carro   ("Opala",
 c10 = Carro     ("Chevrolet C-10",
                  "Caminhonete",
                  "Veraneio",
-                 "Azul","1971",
+                 "Azul",
+                 "1971",
                  "151",
                  "Chevrolet 261")
 
 carros = [chevette, gol, palio, opala, c10]
 for i in carros:
     print(i)
-print(chevette)
+
