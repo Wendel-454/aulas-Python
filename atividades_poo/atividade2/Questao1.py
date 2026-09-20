@@ -9,12 +9,13 @@ class Produto:
             self.__quantidade_estoque += quantidade
 
         else:
-            print("Erro: Quantidade invalida")
+            print("Erro: Quantidade inválida")
 
-    def realizar_venda(self):
-        quantidade = int(input('digite a quantidade da venda:'))
+    def realizar_venda(self, quantidade):
         if quantidade > self.__quantidade_estoque:
             print("Erro: Venda negada: Estoque insuficiente")
+        elif quantidade <= 0:
+            print("Valor inválido")
         else:
             self.__quantidade_estoque -= quantidade
 
@@ -22,14 +23,19 @@ class Produto:
         if percentual > 80 or percentual < 0:
             print("Erro: Desconto inválido")
         else:
-            self.__preco = self.__preco * (percentual / 100)
-            print(f"Desconto aplicado: {percentual}%")
+            desconto = self.__preco * (percentual / 100)
+            self.__preco = self.__preco - desconto
+            print(f"Desconto aplicado: {desconto}R$")
             print(f"Valor atualizado: R${self.__preco}")
 
     def exibir_resumo(self):
+        print(f"Nome do produto: {self.__nome}.\n"
+              f"Preço:           {self.__preco:.2f}R$\n"
+              f"Estoque:         {self.__quantidade_estoque} Und.\n")
         print(self.__dict__)
 
-estoque = Produto('Maikon', 100, 1000)
-estoque.quantidade_estoque = 20
+estoque = Produto('Carro', 25000, 4)
+estoque.quantidade_estoque = 5
+estoque.realizar_venda(10)
 estoque.exibir_resumo()
 
