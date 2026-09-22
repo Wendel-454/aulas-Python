@@ -14,4 +14,4 @@ class Gato(Animal, Categoria):  # rehança multipla
         print(f"O gato {self.nome} cospiu pelo...")
 
     def mostrarIdadeDoGato(self):
-        print(self._tipo)
+        print(self.idade)
