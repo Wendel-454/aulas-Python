@@ -1,0 +1,17 @@
+from atividades_poo.atividade3.Animal import Animal
+
+class  Mamifero(Animal):
+    def __init__(self,velocidade_kmh,nome,idade,nivel_fome):
+        super().__init__(self,nome,idade,nivel_fome)
+        self.__velocidade_kmh = velocidade_kmh
+
+    def correr(self,):
+        self.nivel_fome += 20
+        print(f"{self.nome} correu a {self.__velocidade_kmh}")
+
+    def emitir_som(self):
+        print(f"{self.nome} ruge alto!")
+
+    def exibir_resumo(self):
+        super().exibir_resumo()
+        print(f"velocidade de corrida:{self.__velocidade_kmh}")
