@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 
 class Frete(ABC):
     @abstractmethod
-    def calcular(self,valor_por_km, distancia):
+    def calcular(self,destino, distancia):
         pass
 
     def iniciar_frete(self):
