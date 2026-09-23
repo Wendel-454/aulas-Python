@@ -1,5 +1,4 @@
 from Frete import Frete
-from atividades_poo.atividade4.Caminhao import Caminhao
 
 
 class Moto(Frete):

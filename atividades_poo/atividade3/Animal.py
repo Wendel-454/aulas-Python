@@ -2,7 +2,7 @@ class Animal:
     def __init__(self,nome,idade,nivel_fome):
         self.__nome = nome
         self.__idade = idade
-        self.__nivel_fome = nivel_fome#0 a 100
+        self.__nivel_fome = nivel_fome #0 a 100
 
     @property
     def nome(self):
@@ -40,9 +40,7 @@ class Animal:
         if porcao <= 0:
             print("Erro: Porção inválida.")
         else:
-            self.__nivel_fome = self.nivel_fome - porcao
-            if self.__nivel_fome < 0:
-                self.__nivel_fome = 0
+            self.nivel_fome -= porcao
 
     def emitir_som(self):
         print(f"{self.__nome} faz som genérico.")
