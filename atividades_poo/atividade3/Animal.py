@@ -28,7 +28,7 @@ class Animal:
         return self.__nivel_fome
 
     @nivel_fome.setter
-    def nivel_fome(self,nivel_fome):
+    def nivel_fome(self,nivel_fome):#conferir se funciona diferente do exemplo do professor
         if nivel_fome < 0:
             self.__nivel_fome = 0
         elif nivel_fome > 100:
@@ -41,6 +41,7 @@ class Animal:
             print("Erro: Porção inválida.")
         else:
             self.nivel_fome -= porcao
+
 
     def emitir_som(self):
         print(f"{self.__nome} faz som genérico.")

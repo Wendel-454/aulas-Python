@@ -6,6 +6,7 @@ leao = Mamifero("Simba",5,70, 80)
 gaviao = Ave("Sky",2,75,120)
 
 leao.__nivel_fome = -999
+print(leao.nivel_fome)
 leao.__idade = -10
 print("Tentativa de alteração direta dos atributos privados (Proteção do Encapsulamento")
 leao.exibir_resumo()
