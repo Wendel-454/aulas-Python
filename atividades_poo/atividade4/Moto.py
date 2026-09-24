@@ -2,7 +2,7 @@ from Frete import Frete
 
 
 class Moto(Frete):
-    def calcular(self, destino, distancia):#metodo abstrato herdado
+    def calcular(self, destino, distancia,peso_carga):#metodo abstrato herdado
         print("Calculando frete via moto.")
         if distancia > 0:
             valor = 2.50 * distancia
