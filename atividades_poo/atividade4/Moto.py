@@ -3,15 +3,18 @@ from Frete import Frete
 
 class Moto(Frete):
     def calcular(self, destino, distancia,peso_carga):#metodo abstrato herdado
-        print("Calculando frete via moto.")
+        print(F"Calculando frete via moto, com destino a {destino}.")
         if distancia > 0:
             valor = 2.50 * distancia
-            print("Valor de do frete: ", valor)
+            print(f"Valor do frete: {valor}")
         else:
             print("Dados incorretos")
 
-moto = Moto()
-moto.calcular(-10,100)
+        if peso_carga > 100:
+            excedente = peso_carga - 100
+            print(f"Carga {excedente} acima do permitido (100kg)")
+        else:
+            print("carga dentro do limite (100kg)")
 
 
 
