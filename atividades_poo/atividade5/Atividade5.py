@@ -13,14 +13,14 @@ class Mesa:
     def somar_total(self):
         total = 0
         for y in self.pedidos:
-            total += y.valor
+            total += y.index
         print(f"Valor total: {total}")
         return total
     def fechar_conta(self, taxa_servico):
         print(f"Finalizando mesa {self.numero_mesa}")
         print("Itens consumidos:")
         for y in self.pedidos:
-            print(f"{y.descricao}, valor: {y.valor}")
+            print(f"{y.descricao}, valor: {y.index}")
         total_consumo = self.somar_total()
         servico = total_consumo * (taxa_servico/100)
         total = total_consumo + servico
