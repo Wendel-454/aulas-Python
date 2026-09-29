@@ -30,7 +30,6 @@ with open("pagamento.txt", "r", encoding="utf-8") as arquivo:
     index = recibo.find("TOTAL")
     print(f"Compra processada com sucesso! Valor cobrado: {recibo[index+7:index+14]}")
 
-print(produtos)
 
 
 
