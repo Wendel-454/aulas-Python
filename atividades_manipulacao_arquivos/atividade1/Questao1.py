@@ -16,7 +16,7 @@ while True:
         print("Erro ao processar. Reiniciando operação.")
 
 for i in produtos:
-    texto_produto += f"{i[0]} R${i[1]}\n"
+    texto_produto += f"{i[0]}: R${i[1]}\n"
 for i in produtos:
     total += i[1]
 

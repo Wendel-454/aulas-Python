@@ -1,0 +1,6 @@
+Cliente: Maikon
+Leite R$5.0
+Carne R$20.0
+café R$30.0
+sabonete R$3.0
+TOTAL: R$58.00
