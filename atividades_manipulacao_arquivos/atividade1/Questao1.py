@@ -1,7 +1,9 @@
-cliente = input("Digite o nome do cliente: ")
 produtos = []
 resposta1 = ""
 resposta2 = 0
+texto_produto = ""
+total = 0
+cliente = input("Digite o nome do cliente: ")
 
 while True:
     try:
@@ -13,19 +15,22 @@ while True:
     except ValueError:
         print("Erro ao processar. Reiniciando operação.")
 
+for i in produtos:
+    texto_produto += f"{i[0]} R${i[1]}\n"
+for i in produtos:
+    total += i[1]
+
 with open("pagamento.txt", "w", encoding="utf-8") as arquivo:
-    total = 0
     arquivo.write(f"Cliente: {cliente}\n")
-    for i in produtos:
-        arquivo.write(f"{i[0],i[1]}\n")
-    for i in produtos:
-        total += i[1]
+    arquivo.write(texto_produto)
     arquivo.write(f"TOTAL: R${total:.2f}\n")
 
 with open("pagamento.txt", "r", encoding="utf-8") as arquivo:
     recibo = arquivo.read()
     index = recibo.find("TOTAL")
     print(f"Compra processada com sucesso! Valor cobrado: {recibo[index+7:index+14]}")
+
+print(produtos)
 
 
 
