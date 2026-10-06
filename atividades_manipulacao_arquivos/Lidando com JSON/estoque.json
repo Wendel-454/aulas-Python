@@ -3,12 +3,13 @@
     "produtos": [
         {
             "nome": "Teclado",
-            "preco": 150.0,
-            "quantidade": 10
+            "preco": 135.0,
+            "quantidade": 20
         },
         {
             "nome": "Mouse",
-            "preco": 80.0
+            "preco": 80.0,
+            "quantidade": 10
         },
         {
             "nome": "Monitor",
