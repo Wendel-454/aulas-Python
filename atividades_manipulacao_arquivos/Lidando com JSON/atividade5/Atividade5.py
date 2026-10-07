@@ -14,8 +14,8 @@ with open("banco_livros.txt", encoding="utf-8") as arquivo:
                                 "nome":i[1],
                                 "descricao":i[2],
                                 "preco":float(i[3]),
-                                "em_estoque":int(i[4]
-                                )})
+                                "em_estoque":int(i[4])
+        })
 
 #etapa2
 with open("catalogo.json", "w", encoding="utf-8") as arquivo:
