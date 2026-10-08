@@ -4,7 +4,7 @@ catalogo_livros = []
 catalogo_livros_load = []
 
 #etapa1
-with open("banco_livros.txt", encoding="utf-8") as arquivo:
+with open("banco_livros.txt", "r" , encoding="utf-8") as arquivo:
     for i in arquivo:
         if i == "":
             continue
@@ -71,8 +71,8 @@ def catalogo():
     estoque_total = 0.0
 
     for i in catalogo_livros_load:
-        estoque_total += i["preco"]
-        if i["em_estoque"] < 15:
+        estoque_total += i["preco"]  *  i["em_estoque"]
+        if i["em_estoque"] <= 15:
             print(f"O livro {i['nome']} tem apenas {i['em_estoque']} livros em estoque.")
 
     print(f"Valor total do estoque é de R${estoque_total:.2f}")
