@@ -33,8 +33,11 @@ def calcular_media():
 
                 if dados[0] == nome:
                     nota1 = float(dados[2])
+
                     nota2 = float(dados[3])
+
                     nota3 = float(dados[4])
+
                     nota4 = float(dados[5])
 
                     media = (nota1 + nota2 + nota3 + nota4) / 4
