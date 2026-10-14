@@ -31,8 +31,9 @@ def calcular_media():
             for linha in arquivo:
                 dados = linha.strip().split(";")
 
+
                 if dados[0] == nome:
-                    nota1 = float(dados[2])
+                    nota1 = float(dados[2])#
                     nota2 = float(dados[3])
                     nota3 = float(dados[4])
                     nota4 = float(dados[5])
