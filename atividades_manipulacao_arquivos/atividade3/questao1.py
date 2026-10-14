@@ -24,7 +24,7 @@ def acr_aluno():
         else:
             resultado = "Reprovado"
 
-        with open("alunos.txt", "a", encoding="utf-8") as arquivo:
+        with open("../lidando com TXT/atividade3/alunos.txt", "a", encoding="utf-8") as arquivo:
             decisao = input(
                 f"Deseja adicionar o aluno {aluno};{turma};{nota1};{nota2};{nota3};{nota4};{resultado}?\n s/n:")
             if decisao == "s" or decisao == "S":
@@ -46,7 +46,7 @@ def media_aluno():
 
         while True:
             nome = input("Digite o nome do aluno: ")
-            with open("alunos.txt", "r", encoding="utf-8") as arquivo:
+            with open("../lidando com TXT/atividade3/alunos.txt", "r", encoding="utf-8") as arquivo:
                 linhas = arquivo.readlines()
                 dados = []
                 for i in linhas:
@@ -74,7 +74,7 @@ def cnslt_status():
     lista_alunos = []
     alvo = []
 
-    with open("alunos.txt", "r", encoding="utf-8") as arquivo:
+    with open("../lidando com TXT/atividade3/alunos.txt", "r", encoding="utf-8") as arquivo:
         linhas = arquivo.readlines()
         for i in linhas:
             if i.strip() == "":
@@ -95,7 +95,7 @@ def maior_media():
     aln_turma = []
     aln_media = []
 
-    with open("alunos.txt", "r", encoding="utf-8") as arquivo:
+    with open("../lidando com TXT/atividade3/alunos.txt", "r", encoding="utf-8") as arquivo:
         turma = input("Digite a turma: ")
         linhas = arquivo.readlines()
         for i in linhas:
