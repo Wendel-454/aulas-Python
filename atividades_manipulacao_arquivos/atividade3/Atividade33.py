@@ -2,12 +2,14 @@ def acrescentar_aluno():
     nome = input("Nome do aluno: ")
     turma = input("Turma: ")
 
+
     nota1 = float(input("Nota do 1º bimestre: "))
     nota2 = float(input("Nota do 2º bimestre: "))
     nota3 = float(input("Nota do 3º bimestre: "))
     nota4 = float(input("Nota do 4º bimestre: "))
 
     media = (nota1 + nota2 + nota3 + nota4) / 4
+
 
     if media >= 7:
         status = "Aprovado"
@@ -18,6 +20,8 @@ def acrescentar_aluno():
         arquivo.write(f"{nome};{turma};{nota1};{nota2};{nota3};{nota4};{status}\n")
 
     print("Aluno cadastrado com sucesso!")
+
+
 
 
 def calcular_media():
@@ -44,13 +48,16 @@ def calcular_media():
         if encontrado == False:
             print("Aluno não encontrado.")
 
+
     except FileNotFoundError:
         print("Arquivo não encontrado.")
+
 
 
 def consultar_status():
     nome = input("Digite o nome do aluno: ")
     encontrado = False
+
 
     try:
         with open("alunos.txt", "r", encoding="utf-8") as arquivo:
@@ -62,6 +69,8 @@ def consultar_status():
                     encontrado = True
                     break
 
+
+
         if encontrado == False:
             print("Aluno não encontrado.")
 
@@ -69,11 +78,13 @@ def consultar_status():
         print("Arquivo não encontrado.")
 
 
+
 def maior_media():
     turma = input("Digite a turma: ")
     maior = -1
     aluno_maior = ""
     encontrado = False
+
 
     try:
         with open("alunos.txt", "r", encoding="utf-8") as arquivo:
@@ -100,8 +111,10 @@ def maior_media():
         else:
             print("Turma não encontrada.")
 
+
     except FileNotFoundError:
         print("Arquivo não encontrado.")
+
 
 
 while True:
@@ -113,6 +126,7 @@ while True:
     print("5 - Sair")
 
     opcao = input("Escolha uma opção: ")
+
 
     match opcao:
         case "1":

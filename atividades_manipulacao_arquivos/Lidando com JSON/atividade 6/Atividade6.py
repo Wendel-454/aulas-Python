@@ -33,8 +33,11 @@ lista_aniversariantes.extend(dados1)
 lista_aniversariantes.extend(dados2)
 lista_aniversariantes.extend(dados3)
 
+
+#desafio extra:
 def pega_nome(item):
     return item["nome"]
+
 
 lista_aniversariantes.sort(key = pega_nome)
 
