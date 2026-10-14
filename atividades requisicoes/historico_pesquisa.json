@@ -1,0 +1,47 @@
+[
+    {
+        "cep": "70330-545",
+        "logradouro": "Quadra CLS 102 Bloco D",
+        "complemento": "",
+        "unidade": "",
+        "bairro": "Asa Sul",
+        "localidade": "Brasília",
+        "uf": "DF",
+        "estado": "Distrito Federal",
+        "regiao": "Centro-Oeste",
+        "ibge": "5300108",
+        "gia": "",
+        "ddd": "61",
+        "siafi": "9701"
+    },
+    {
+        "cep": "70610-460",
+        "logradouro": "Quadra SIG Quadra 6",
+        "complemento": "",
+        "unidade": "",
+        "bairro": "Zona Industrial",
+        "localidade": "Brasília",
+        "uf": "DF",
+        "estado": "Distrito Federal",
+        "regiao": "Centro-Oeste",
+        "ibge": "5300108",
+        "gia": "",
+        "ddd": "61",
+        "siafi": "9701"
+    },
+    {
+        "cep": "72115-700",
+        "logradouro": "Área Especial Setor C Norte",
+        "complemento": "",
+        "unidade": "",
+        "bairro": "Taguatinga Norte",
+        "localidade": "Brasília",
+        "uf": "DF",
+        "estado": "Distrito Federal",
+        "regiao": "Centro-Oeste",
+        "ibge": "5300108",
+        "gia": "",
+        "ddd": "61",
+        "siafi": "9701"
+    }
+]
