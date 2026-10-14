@@ -2,12 +2,14 @@ def acrescentar_aluno():
     nome = input("Nome do aluno: ")
     turma = input("Turma: ")
 
+
     nota1 = float(input("Nota do 1º bimestre: "))
     nota2 = float(input("Nota do 2º bimestre: "))
     nota3 = float(input("Nota do 3º bimestre: "))
     nota4 = float(input("Nota do 4º bimestre: "))
 
     media = (nota1 + nota2 + nota3 + nota4) / 4
+
 
     if media >= 7:
         status = "Aprovado"
@@ -40,6 +42,7 @@ def calcular_media():
                     print(f"A média de {nome} é {media:.2f}")
                     encontrado = True
                     break
+
 
         if encontrado == False:
             print("Aluno não encontrado.")
@@ -80,6 +83,7 @@ def maior_media():
     encontrado = False
 
 
+
     try:
         with open("alunos.txt", "r", encoding="utf-8") as arquivo:
             for linha in arquivo:
@@ -112,6 +116,7 @@ def maior_media():
 
 
 
+
 while True:
     print("\n===== SISTEMA ESCOLAR =====")
     print("1 - Acrescentar aluno")
@@ -121,6 +126,7 @@ while True:
     print("5 - Sair")
 
     opcao = input("Escolha uma opção: ")
+
 
 
     match opcao:
