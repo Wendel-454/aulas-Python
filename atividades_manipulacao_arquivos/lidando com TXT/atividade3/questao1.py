@@ -24,7 +24,7 @@ def acr_aluno():
         else:
             resultado = "Reprovado"
 
-        with open("alunos.txt", "a") as arquivo:
+        with open("alunos.txt", "a", encoding="utf-8") as arquivo:
             decisao = input(
                 f"Deseja adicionar o aluno {aluno};{turma};{nota1};{nota2};{nota3};{nota4};{resultado}?\n s/n:")
             if decisao == "s" or decisao == "S":
