@@ -2,14 +2,12 @@ def acrescentar_aluno():
     nome = input("Nome do aluno: ")
     turma = input("Turma: ")
 
-
     nota1 = float(input("Nota do 1º bimestre: "))
     nota2 = float(input("Nota do 2º bimestre: "))
     nota3 = float(input("Nota do 3º bimestre: "))
     nota4 = float(input("Nota do 4º bimestre: "))
 
     media = (nota1 + nota2 + nota3 + nota4) / 4
-
 
     if media >= 7:
         status = "Aprovado"
@@ -20,8 +18,6 @@ def acrescentar_aluno():
         arquivo.write(f"{nome};{turma};{nota1};{nota2};{nota3};{nota4};{status}\n")
 
     print("Aluno cadastrado com sucesso!")
-
-
 
 
 def calcular_media():
@@ -53,7 +49,6 @@ def calcular_media():
         print("Arquivo não encontrado.")
 
 
-
 def consultar_status():
     nome = input("Digite o nome do aluno: ")
     encontrado = False
@@ -68,7 +63,6 @@ def consultar_status():
                     print(f"{nome} está {dados[6]}")
                     encontrado = True
                     break
-
 
 
         if encontrado == False:
@@ -114,6 +108,7 @@ def maior_media():
 
     except FileNotFoundError:
         print("Arquivo não encontrado.")
+
 
 
 
