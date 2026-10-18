@@ -1,5 +1,3 @@
-
-
 import requests, json
 
 with open("dados_funcionarios_atualizados.json", encoding="utf-8") as dados:
