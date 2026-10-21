@@ -1,20 +1,15 @@
-from csv import excel
-from json import JSONDecodeError
-from sys import exception
 
 import requests
 import json
 
 link_funcionarios = "http://192.168.205.100:8080/funcionarios"
 
-#                json    python
-# dados vazios = null == None
 
-resposta = requests.get(link_funcionarios) # enviando uma requisição do tipo GET
+resposta = requests.get(link_funcionarios)
 
 
 
-print(resposta.json()) # mostrando o que recebeu na requisição HTTP
+print(resposta.json())
 
 lista_funcionarios = resposta.json()
 
@@ -54,9 +49,3 @@ for funcionario in lista_funcionarios:
 # base de dados atualizada
 for funcionario in lista_funcionarios:
     print(funcionario)
-
-# inserir dados onde estiver algum dado vazio ok
-# no cep, apenas aceitar CEPS válidos
-#   (que tenham retorno de cidade, estado, etc...)
-# salvar os dados preenchidos em um arquivo JSON
-#   (ex: dados_funcionarios_atualizados.json)
