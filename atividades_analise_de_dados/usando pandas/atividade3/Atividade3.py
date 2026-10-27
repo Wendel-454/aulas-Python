@@ -1,4 +1,5 @@
 import pandas as pd
+from pandas import to_numeric
 
 dados = pd.read_csv('dados_despadronizados.csv',
                     dtype = {'cpf': 'string',
@@ -19,9 +20,10 @@ dados_sal_formatado = (dados["salario"]
                               .str.replace(r",",".", regex=False)
                               .astype(float)
                                )
+dados_sal_formatado = pd.to_numeric(dados_sal_formatado)
 
 dados.insert(8, "salario_formatado",dados_sal_formatado)
-
+dados['salario_anual'] = dados['salario_formatado'] * 12 + dados['salario_formatado']
 print(dados.to_string())
 
 
