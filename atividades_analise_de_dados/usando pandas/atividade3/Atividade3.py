@@ -1,5 +1,4 @@
 import pandas as pd
-from pandas import to_numeric
 
 dados = pd.read_csv('dados_despadronizados.csv',
                     dtype = {'cpf': 'string',
