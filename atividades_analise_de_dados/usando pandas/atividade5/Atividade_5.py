@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 
 df=pd.read_csv('vendas_mercados.csv')
 
@@ -30,6 +31,38 @@ print(f'O produto mais vendido foi {mais_vendido["Produto"]} com {mais_vendido["
 
 menos_vendido = tabela_itens_vendidos.loc[tabela_itens_vendidos['Quantidade'].idxmin()]
 print(f'O produto menos vendido foi {menos_vendido["Produto"]} com {menos_vendido["Quantidade"]} itens vendidos.')
+
+# Criando a coluna Faturamento
+df['Faturamento'] = df['Preco_Unitario'] * df['Quantidade']
+
+# Calculando o faturamento total da rede
+faturamento_total = df['Faturamento'].sum()
+
+# Calculando o faturamento por mercado
+faturamento_mercado = df.groupby('Mercado')['Faturamento'].sum()
+
+# Identificando o mercado com maior faturamento
+maior_faturamento = faturamento_mercado.idxmax()
+
+print('Faturamento total:', faturamento_total)
+print('Faturamento por mercado:')
+print(faturamento_mercado)
+print('Mercado com maior faturamento:', maior_faturamento)
+
+# Aplicando desconto de 10% para compras com quantidade >= 10
+df['Preco_Promocional'] = np.where(
+    df['Quantidade'] >= 10,
+    df['Preco_Unitario'] * 0.90,
+    df['Preco_Unitario']
+)
+
+# Calculando o novo faturamento
+df['Faturamento_Promocional'] = df['Preco_Promocional'] * df['Quantidade']
+
+# Somando o novo faturamento total
+novo_faturamento = df['Faturamento_Promocional'].sum()
+
+print(f'Novo faturamento: R$ {novo_faturamento:.2f}')
 
 
 
